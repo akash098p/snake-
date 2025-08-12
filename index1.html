@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍 Snake Game+ - Modes, Shop, Coins & Diamonds</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="sidebar">
+            <div id="sidebarContent"></div>
+        </div>
+    </div>
+    
+    <!-- UI Overlays -->
+    <div id="uiOverlay">
+        <!-- Mode Selection Screen -->
+        <div id="modeSelectScreen" class="screen">
+            <h1>Select Game Mode</h1>
+            <div id="modeButtons"></div>
+            <div id="highScores"></div>
+            <div id="walletInfo"></div>
+            <div id="actionButtons"></div>
+            <div id="shopButtons"></div>
+        </div>
+
+        <!-- Shop Screens -->
+        <div id="shopThemesScreen" class="screen hidden">
+            <h1>Themes</h1>
+            <div id="themesList"></div>
+            <button id="backFromThemes" class="back-btn">Back</button>
+        </div>
+
+        <div id="shopSkinsScreen" class="screen hidden">
+            <h1>Skins</h1>
+            <div id="skinsList"></div>
+            <button id="backFromSkins" class="back-btn">Back</button>
+        </div>
+
+        <div id="shopBoostsScreen" class="screen hidden">
+            <h1>Boost Power-ups</h1>
+            <div id="boostsList"></div>
+            <button id="backFromBoosts" class="back-btn">Back</button>
+        </div>
+
+        <!-- About Screen -->
+        <div id="aboutScreen" class="screen hidden">
+            <h1>About</h1>
+            <div class="about-content">
+                <p>Snake+ with Modes, Themes, Skins, Coins & Diamonds.</p>
+                <p>Collect coins and diamonds in-game.</p>
+                <p>Buy skins and themes, upgrade power-up durations.</p>
+                <p>High scores saved per mode.</p>
+            </div>
+            <button id="backFromAbout" class="back-btn">Back</button>
+        </div>
+
+        <!-- Settings Screen -->
+        <div id="settingsScreen" class="screen hidden">
+            <h1>Settings</h1>
+            <div class="settings-content">
+                <label for="volumeSlider">Volume: <span id="volumeValue">70%</span></label>
+                <input type="range" id="volumeSlider" min="0" max="100" value="70">
+            </div>
+            <button id="backFromSettings" class="back-btn">Close</button>
+        </div>
+
+        <!-- Game Over Overlay -->
+        <div id="gameOverOverlay" class="overlay hidden">
+            <h1>GAME OVER</h1>
+            <p id="finalScore">Score: 0</p>
+            <p id="newHighScore" class="hidden">NEW HIGH SCORE!</p>
+            <p>Press SPACE to restart, Esc for Menu</p>
+        </div>
+
+        <!-- Pause Overlay -->
+        <div id="pauseOverlay" class="overlay hidden">
+            <h1>PAUSED</h1>
+        </div>
+
+        <!-- Audio Initialization Notice -->
+        <div id="audioNotice" class="overlay hidden">
+            <h2>🔊 Audio Ready!</h2>
+            <p>Click anywhere to enable sounds</p>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
